@@ -1,0 +1,60 @@
+Question1:
+
+
+Question2:(Irfan)
+
+<?php
+// database connection statements
+   $dbhost = 'localhost';
+   $dbuser = 'root';
+   $dbpass = 'rootpassword';
+   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+   if(! $conn ) {
+      die('Could not connect: ' . mysql_error());
+   }
+// select database
+mysql_select_db('reservation_db');
+// selection query
+$sql = 'SELECT Reservation_id, Venue_room, Purpose, Time_in, Time_out, First_date, Last_date FROM
+reservation WHERE status='booked' ';
+$retval = mysql_query( $sql, $conn );
+ if(! $retval ) {
+  die('Could not get data: ' . mysql_error());
+   }
+// submit form data for insertion form
+if(isset($_POST['sub']))
+{
+$Venue_room=$_post['t1']
+$Purpose=$_post['t2']
+$Time_in=$_post['t3']
+$Time_out=$_post['t4']
+$First_date$=post['t5']
+$Last_date=$_post['t6']
+query="insert into reservation
+values('1',$Venue_room,$Purpose,$Time_in,$Time_out,$First_date,$$Last_date,)";
+   while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+          $id=$row['Reservation_id'];
+          $venue=$row['Venue_room'];
+          $tin=$row['Time_in'];
+          $tout=$row['Time_out'];
+          $fromdate=$row['First_date'];
+// checking overlap condition
+if($query[$Venue_room]==$venu&& $query[time_in]>=$tin&&$query[time_out]
+<=tout)&&$query[fromdate]== $fromdate)
+{
+echo "Not inserted , date and time overlap";
+}
+else{
+mysql_query($query);
+echo "inserted";
+}
+}   }
+   echo "Fetched data successfullyn";  
+   mysql_close($conn);
+?>
+
+Question3:
+
+Question4:
+
+Question5:
