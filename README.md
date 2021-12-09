@@ -13,6 +13,16 @@ Members
 
 5.
 
+Assigned Task:
+1. A building having 30 venues for conferences and
+seminars.(Hasib)
+2. Date and time are crucial to avoid clashes for
+multiple seminars in the same venue, date and
+time.(Irfan Danial)
+3. First comes, first served basis.
+4. Only available venues can reserve.(Haikal)
+5. The venues are operating from 8am until 11pm.(Akim)
+
 
 Case Study Description:
 
